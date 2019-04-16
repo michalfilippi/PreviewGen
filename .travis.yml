@@ -1,8 +1,15 @@
 language: python
 dist: xenial
 python:
-- '3.7'
+  - '3.7'
 install:
-- pip install -r requirements.txt
+  - pip install -r requirements.txt
 script:
-- python -m pytest -v
+  - python -m pytest -v
+deploy:
+  provider: pypi
+  user: michalfilippi
+  password:
+    secure: r/sHfREp40/WB0Ua2gygDl1rUS1yf4icCNxFbghDpma5NkjlYzqxX6CQKyaDsKaKvtS2kIlE5/dZQ1X8MTZ3k6OpqNhois2CRyhYslpWVOztx8A7UnBVYZP+LYCSKoT1Z96PcKUO2jeaE88qpfEl6cYFzD2AeBvVrSQIMGDlLG+1DRCHl71+OTBZ7h5Eg54limykU1UKHW2qz8/Wj9tvrUhFcGfBmPmXyuCTzNq7zJetQLEDZHzAd1uE+quVpfjorxuCue7gZn7UyDK3q2FcWjyMs30RRjh4dcG3VlCrUpvRzQeSkkFTYAtuqh5Dj6xFIf9j8sb3kZYm0N/9XNak5nMa2+zcW3P80hUPHgMk85QOENc4846DGvjgtlCj+QrmQHAttgkp45z0tQhKnKcjk8bcGq26n12tkOJX52xpNSTRUPIYOwF+wInkRVQzj0aC7Z5m/pkwQqaqpmtV2JXJ4ur3RliyuhLL574xHp0MIlJghsXtlRl9yXkkl27X25K0Lyl5+HiMIvj+lXxv4FHifknF5IKVTJs5Qv2Tu58NmFLG2Obq28q/xj3aK7adzmKK0C1RYXUv9dPhwjFl8NrIWuIY6cOg3fU1+/rF/jC1tV4Vzj0PPo+e113u1TC5VHKxB7cE3BC9WqAaU9eeLJQZERrZYahmB7jPkYDvYwnSLYM=
+  on:
+    tags: true
