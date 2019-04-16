@@ -1,0 +1,5 @@
+pytest>=4.4.0
+PyYAML>=5.1
+Pillow>=6.0.0
+schema>=0.7.0
+
