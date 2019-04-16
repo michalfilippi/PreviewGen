@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="previewgen",
-    version="1.0",
+    version="1.1",
     author="Michal Filippi",
     author_email="michal.filippi@gmail.com",
     description="",
