@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="previewgen",
-    version="1.2",
+    version="1.3",
     author="Michal Filippi",
     author_email="michal.filippi@gmail.com",
     description="",
@@ -13,6 +13,11 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="https://github.com/michalfilippi/PreviewGen",
     packages=setuptools.find_packages(),
+    install_requires = [
+        'PyYAML>=5.1',
+        'Pillow>=6.0.0',
+        'schema>=0.7.0'
+    ],
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
