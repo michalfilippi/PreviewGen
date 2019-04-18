@@ -33,8 +33,8 @@ usage: preview-gen [-h] config_file
 # example config file conf.yaml
 
 scanner:
-  source_dir: /Users/mfilippi/pg-gallery/s
-  destination_dir: /Users/mfilippi/pg-gallery/d
+  source_dir: /path/to/gallery/source/
+  destination_dir: /path/to/preview/destination/
 
 previewer:
   max_width: 1000
@@ -180,4 +180,4 @@ $ du -h preview
 
 ---
 
-[![Build Status](https://travis-ci.com/userfilippi/PreviewGen.svg?branch=master)](https://travis-ci.com/userfilippi/PreviewGen)
+[![Build Status](https://travis-ci.com/michalfilippi/PreviewGen.svg?branch=master)](https://travis-ci.com/michalfilippi/PreviewGen)
