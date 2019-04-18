@@ -25,7 +25,7 @@ setuptools.setup(
     ],
     entry_points={
         'console_scripts': [
-            'preview-gen = previewgen.__main__:main'
+            'preview-gen = previewgen.previewgenerator:main'
         ]
     }
 )
