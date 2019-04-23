@@ -24,7 +24,7 @@ class Scanner:
         paths = self._relative_paths(paths)
         if self.ignore_hidden:
             paths = self._ignore_hidden(paths)
-        logger.debug(f"Found {len(paths)} relevant images.")
+        logger.info(f"Found {len(paths)} relevant images.")
 
         return self._filter_existing(self._pair_files(paths))
 
@@ -50,13 +50,13 @@ class Scanner:
     @staticmethod
     def _ignore_hidden(paths: List[Path]):
         hidden = {p for p in paths if any(map(lambda s: s.startswith('.'), p.parts))}
-        logging.info(f"Ignoring {len(hidden)} hidden photos or photos under hidden subtree.")
+        logger.info(f"Ignoring {len(hidden)} hidden photos or photos under hidden subtree.")
 
         return list(set(paths).difference(hidden))
 
     @staticmethod
     def _filter_existing(path_pairs: List[Tuple[Path, Path]]) -> List[Tuple[Path, Path]]:
         filtered_path_pairs = list(filter(lambda p: not p[1].exists(), path_pairs))
-        logger.debug(f"Skipping {len(path_pairs) - len(filtered_path_pairs)} already processed photos.")
+        logger.info(f"Skipping {len(path_pairs) - len(filtered_path_pairs)} already processed photos.")
 
         return filtered_path_pairs
